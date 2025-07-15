@@ -2,7 +2,7 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime
-from airflow.providers.microsoft.azure.operators.adf import AzureDataFactoryRunPipelineOperator
+from airflow.providers.microsoft.azure.operators.data_factory import AzureDataFactoryRunPipelineOperator
 
 # 定义 DAG
 with DAG(
