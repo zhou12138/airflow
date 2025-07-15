@@ -27,6 +27,7 @@ with DAG(
     run_adf_pipeline = AzureDataFactoryRunPipelineOperator(
         task_id="run_my_adf_pipeline",
         pipeline_name="AirflowtriggerTest",
+        resource_group_name="your_resource_group",
         factory_name="ADFCMReplayV3",
         azure_data_factory_conn_id="azure_data_explorer_default",
         wait_for_termination=True,  # 是否等待 pipeline 执行完成
