@@ -1,1 +1,1 @@
-apache-airflow-providers-microsoft-azure
+apache-airflow-providers-microsoft-azure==8.12.0
