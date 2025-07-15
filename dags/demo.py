@@ -12,12 +12,16 @@ with DAG(
     tags=['example']
 ) as dag:
 
-    # 定义一个任务
-     hello_task = BashOperator(
+    # 定义任务
+    hello_task = BashOperator(
         task_id='say_hello_yes',
-        bash_command='echo "Hello, Airflow!"')
+        bash_command='echo "Hello, Airflow!"'
+    )
 
-     hello_task2 = BashOperator(
+    hello_task2 = BashOperator(
         task_id='say_hello_yes1',
-        bash_command='echo "Hello, Airflow!"')
+        bash_command='echo "Hello, Airflow!"'
+    )
+
+    # 设置任务依赖关系
     hello_task >> hello_task2
