@@ -17,6 +17,11 @@ with DAG(
         task_id='say_hello_yes',
         bash_command='echo "Hello, Airflow!"')
 
+     hello_task2 = BashOperator(
+        task_id='say_hello_yes1',
+        bash_command='echo "Hello, Airflow!"')
+    hello_task=>hello_task2
+
 # 定义 DAG
 with DAG(
     dag_id='demo_hello_world2',
@@ -30,4 +35,5 @@ with DAG(
      hello_task = BashOperator(
         task_id='say_hello_yes1',
         bash_command='echo "Hello, Airflow!"')
+
 
